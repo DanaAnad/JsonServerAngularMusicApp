@@ -1,0 +1,16 @@
+<div class="song-component-container" >
+	<div class="song-position">
+		<span class="song-id">Pos: {{position}}</span>
+	</div>
+	<div class="song-container">
+		<span id="song-name">Song name: {{song.name}}</span>
+		<span id="artist-name">Artist: {{song.artist}}</span>
+		<span id="songEntryDate">Date: {{song.entryTopDate}}</span>
+		<span id="votes">Votes: {{song.votes}}</span>
+	</div>
+	<div class="song-buttons">
+		<app-button type="button" (click)="voteSong(song)" id="vote" color="green" text="Vote"></app-button>
+        <app-button id="edit" color="yellow" text="Edit"></app-button>
+        <app-button (click)="onDelete(song)" id="delete" color="red" text="Delete"></app-button>
+	</div>
+</div>

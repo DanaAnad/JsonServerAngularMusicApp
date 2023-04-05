@@ -1,0 +1,14 @@
+<div class="form-container">
+    <form id="song-form" ng-Submit="onSubmit()">
+        <label id="artist-label" for="artist">Artist name: </label>
+        <input type="text" name="artist" [(ngModel)]="artist" title="artist-name" id="artist" placeholder="artist name...">
+        <label id="song-label" for="song-input">Song name: </label>
+        <input type="text" name="name" [(ngModel)]="name" title="song-name" id="song-input" placeholder="song name...">
+    </form>
+    <div class="buttons">
+        <app-button id="apply" color="" text="Apply changes"></app-button>
+        <app-button id="search" color="" text="Search"></app-button>
+        <app-button id="submit" color="" text="Submit" type="submit" (click)="onSubmit()" ></app-button>
+    </div>
+</div>
+ 

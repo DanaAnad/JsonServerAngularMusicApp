@@ -1,0 +1,7 @@
+export interface Song {
+    id?: number;
+    name:string;
+    artist:string;
+    votes:number;
+    readonly entryTopDate:string;
+}

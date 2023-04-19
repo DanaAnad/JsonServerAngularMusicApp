@@ -1,14 +1,16 @@
-<div class="form-container">
-    <form id="song-form" ng-Submit="onSubmit()">
-        <label id="artist-label" for="artist">Artist name: </label>
-        <input type="text" name="artist" [(ngModel)]="artist" title="artist-name" id="artist" placeholder="artist name...">
-        <label id="song-label" for="song-input">Song name: </label>
-        <input type="text" name="name" [(ngModel)]="name" title="song-name" id="song-input" placeholder="song name...">
-    </form>
-    <div class="buttons">
-        <app-button id="apply" color="" text="Apply changes"></app-button>
-        <app-button id="search" color="" text="Search"></app-button>
-        <app-button id="submit" color="" text="Submit" type="submit" (click)="onSubmit()" ></app-button>
+<form id="song-form" ng-Submit="onSubmit()">
+    <div class="form-group">
+      <label for="artist-name">Artist name: </label>
+      <input type="text" #artistInput name="artist" [(ngModel)]="artist" title="artist-name" class="form-control" id="artist-name"  placeholder="artist name...">
     </div>
-</div>
+    <div class="form-group">
+      <label for="song-name">Song name: </label>
+      <input type="text" #songInput name="name" [(ngModel)]="name" title="song-name" class="form-control" id="song-name" placeholder="song name...">
+    </div>
+    <div class="buttons">
+        <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+        <button type="submit" (click)="submitSearchSong(artist, name)" class="btn btn-primary">Search</button>
+        <button type="submit" (click)="onEditSong()" class="btn btn-primary">Apply changes</button>
+    </div>  
+  </form>
  

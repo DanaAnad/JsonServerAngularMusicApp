@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import {Song} from "../../Interfaces/Song";
 
 @Component({
@@ -11,8 +11,10 @@ export class SongComponent <T extends Song> {;
   @Input() song: Song;
   @Input() position:number;
 
+
   @Output() onDeleteSong :EventEmitter<Song> = new EventEmitter;
   @Output() onVoteSong :EventEmitter<Song> = new EventEmitter;
+  @Output() editSong = new EventEmitter<number>()
   
   onDelete(song:any){
     console.log(song);

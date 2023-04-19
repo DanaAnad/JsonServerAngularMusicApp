@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Song } from '../Interfaces/Song';
 
 
@@ -8,9 +8,9 @@ import { Song } from '../Interfaces/Song';
 	providedIn: 'root'
 })
 export class SongService {
-
-	// private apiUrl = "http://localhost:5000/songs";
-	private apiUrl = "https://jsonserversongs.herokuapp.com/songs"
+	updateSongEvent = new EventEmitter<Song>();
+	
+	private apiUrl = "https://jsonserversongs.herokuapp.com/songs";
 
 	constructor( private http:HttpClient) { }
 
@@ -33,12 +33,23 @@ export class SongService {
 		const url = `${this.apiUrl}/${song.id}`;
 		return this.http.patch<Song>(url, song,{ headers: headers })	
 	}
-	  
-	  
-	  
-	  
-	  
 
+	getSongById(id:number): Observable<Song>{
+		return this.http.get<Song>(`${this.apiUrl}/${id}`)	
+	}
 
+	updateSong(id:number, artist:string, name:string): Observable<Song> {
+		const headers = new HttpHeaders().set('Content-Type', 'application/json');
+		const url = `${this.apiUrl}/${id}`;
+		let body = {};		  
+		if(artist && name){
+			body = {artist, name}
+		} else if(artist) {
+			body = {artist}
+		} else if(name){
+			body = {name}}
+		return this.http.patch<Song>(url, body, { headers: headers }).pipe(tap((updateSong:Song) => {
+			this.updateSongEvent.emit(updateSong);
+		}));
+	}
 }
- 

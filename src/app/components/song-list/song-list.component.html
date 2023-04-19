@@ -1,12 +1,16 @@
-<!-- <p>song-list works!</p> -->
 <app-song-form 
-    (onAddSong)="addSong($event)">
+    #formRef
+    (onAddSong)="addSong($event)"
+    (searchSongEvent)="searchSong($event.artist, $event.name)"
+    [songId]="songId">
 </app-song-form>
+<app-song-list-header></app-song-list-header>
 <app-song 
-    *ngFor="for let song of songs; 
-    let i = index" [song]="song" 
+    *ngFor="let song of songs;
+    let i = index" 
+    [song]="song" 
     [position]="i+1" 
     (onDeleteSong)="deleteSong(song)"
     (onVoteSong)="voteSong(song)"
-    >
+    (editSong)="onEditSong($event)"> 
 </app-song>

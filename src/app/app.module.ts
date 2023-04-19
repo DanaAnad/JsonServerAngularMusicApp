@@ -7,6 +7,7 @@ import { SongComponent } from './components/song/song.component';
 import { SongListComponent } from './components/song-list/song-list.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SongFormComponent } from './components/song-form/song-form.component';
+import { SongListHeaderComponent } from './components/song-list-header/song-list-header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SongFormComponent } from './components/song-form/song-form.component';
     SongComponent,
     SongListComponent,
     ButtonComponent,
-    SongFormComponent
+    SongFormComponent,
+    SongListHeaderComponent
   ],
   imports: [
     BrowserModule,

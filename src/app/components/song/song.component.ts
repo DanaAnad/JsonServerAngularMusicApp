@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import {Song} from "../../Interfaces/Song";
 
 @Component({
@@ -6,7 +6,9 @@ import {Song} from "../../Interfaces/Song";
   templateUrl: './song.component.html',
   styleUrls: ['./song.component.scss']
 })
-export class SongComponent <T extends Song> {;
+export class SongComponent <T extends Song> {
+
+  selected=false;
   songs:Song[]=[];
   @Input() song: Song;
   @Input() position:number;
@@ -23,5 +25,10 @@ export class SongComponent <T extends Song> {;
   voteSong(song:Song){
     console.log(song);
     this.onVoteSong.emit(song);
+  }
+
+  onEditClick(id:number) {
+    this.selected=true;
+    this.editSong.emit(this.song.id);
   }
 }

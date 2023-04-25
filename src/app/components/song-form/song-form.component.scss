@@ -1,21 +1,94 @@
-#song-form {
-    display:flex;
-    justify-content: space-around;
-    width: 100vw;
-    align-items: center;
-    padding-left:80px;
-    background-color: rgb(155, 155, 155);
-    justify-content: space-between;
-    padding-left:90px;
-    padding-right:20px;
-}
-.buttons {
-    display:flex;
-    justify-content: space-evenly; 
-    width:30vw;
-}
-.form-group {
-    display: flex;
-    margin:1rem;
-    font-family: sans-serif;
+@media (min-width:1360px){
+    #song-form {
+        margin-left:auto; margin-right:auto;
+        display:flex;
+        width: 100vw;
+        align-items: center;
+        margin-top:1.5rem;
+        margin-bottom:1.7rem;
+    }
+    .search {
+        display: flex;
+        flex-direction: column;
+    }
+    .searchInput {
+        display:flex;
+        margin: 10px;
+        margin-left:30px;
+        width:20vw;
+    }
+    #search {
+        border-radius:20px;
+        height:33px;
+        width: 220px;
+        margin-left:5px;
+    }
+    #searchBtn {
+        display:block;
+        flex-wrap: wrap;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        margin-left: 15px;
+        align-content: center;
+        text-align:center;
+        line-height: 31px;
+        background-color:#c70c6f;
+        color:white;
+        border:none;
+        font-size:smaller;
+    }
+    .inputContainer {
+        display:flex;
+        flex-direction: row;
+        width: 60vw;
+        justify-content: flex-end;
+    }
+    .song {
+        display: flex;
+        flex-direction: column;
+        margin:10px;
+    }
+    .artist {
+        display: flex;
+        flex-direction: column;
+        margin:10px;
+    }
+    .formInput {
+        display: flex;
+        margin: 10px;
+    }
+    .formControl {
+        width: 230px;
+        height: 33px;
+        border-radius:20px;
+        border:none;
+        text-align:center;
+    }
+
+    .buttons {
+        display:flex;
+        justify-content: flex-end;
+        width:20vw;
+        margin-right:20px;
+    }
+    .button {
+        margin:5px;
+        width:120px;
+        height: 31px;
+        border-radius:20px;
+        border:none;
+        background-color: #c70c6f;
+        color:white;
+    }
+    #submit {
+        margin-right:15px;
+    }
+    .inputError {
+        color:white;
+        display: flex;
+        flex-direction: column;
+        margin:10px;
+        font-size:17px;
+    }
 }

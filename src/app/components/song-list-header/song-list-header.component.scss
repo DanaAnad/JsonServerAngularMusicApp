@@ -3,14 +3,14 @@
     flex-direction: row;
     width:100vw;
     height:35px;
-    background-color: #007bff;
     align-items: center;
     justify-content:space-around;
     color:white;
+    margin-bottom:1rem;
  }
  #position {
     margin-right: 100px;
-    margin-left:-35px
+    margin-left:-35px;
  }
  .titles {
     display:flex;
@@ -19,3 +19,6 @@
     width:50vw;
     margin-left: -190px;
  }
+
+
+ 

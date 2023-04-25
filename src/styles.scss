@@ -1,5 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-// body {
-//     background-color:aquamarine;
-// }
-
+body {
+    background:url(./assets/1.jpg);
+}
+#songContainer {
+    background-color: white;
+    width:96vw;
+    margin:auto;
+    border-radius: 10px;
+    padding-top:10px; padding-bottom:10px; 
+}

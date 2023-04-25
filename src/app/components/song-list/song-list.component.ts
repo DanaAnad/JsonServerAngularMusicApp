@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, QueryList, ViewChildren} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import {Song} from "../../Interfaces/Song";
 import { SongService } from 'src/app/services/song.service';
 
@@ -14,16 +14,19 @@ export class SongListComponent  {
   songId:number;
   artist:string="";
   name:string="";
+  searchResult: boolean|null = null;
+  isEditMode = false;
 
   @Input() songs: Song[] = [];
   
   onEditSong(id:number){
     this.songId=id;
+    this.isEditMode = true;
   }
  
   ngOnInit():void {
     this.getSongsByVoteNr();
-    this.subscribeToUpdateSongEvent();
+    this.editSong();
   }
   getSongsByVoteNr(){
     this.songService.getSongs().subscribe(songs => (this.songs = songs.sort((a,b) => (a.votes > b.votes) ? -1 : (a.votes < b.votes) ? 1 : (a.entryTopDate > b.entryTopDate) ? -1 : (a.entryTopDate < b.entryTopDate) ? 1 : 0)));
@@ -34,7 +37,6 @@ export class SongListComponent  {
   };
 
   addSong(song:Song) {
-    console.log(song);
     this.songService.addSong(song).subscribe((song:Song) => (this.songs.push(song)) )
   };
 
@@ -45,7 +47,7 @@ export class SongListComponent  {
     })
   };
 
-  subscribeToUpdateSongEvent(): void {
+  editSong(): void {
     this.songService.updateSongEvent.subscribe((updatedSong: Song) => {
       const index = this.songs.findIndex(s => s.id === updatedSong.id);
       if (index >= 0) {
@@ -53,15 +55,17 @@ export class SongListComponent  {
       }
     });
   }
-  searchSong(artist: string, name: string): void {
+
+  searchSong(searchValue:any): void {
     this.songService.getSongs().subscribe(songs => {
       this.songs = songs.filter(song =>
-        (artist && name) ? 
-          (song.artist === artist && song.name === name) :
-          (artist ? song.artist === artist :
-          name ? song.name === name : true)
+        searchValue ? song.artist === searchValue || song.name === searchValue :true
       );
+      this.searchResult = this.songs.length > 0;
     });
+  }
+  onApply(){
+    this.isEditMode=false;
   }
 
 }

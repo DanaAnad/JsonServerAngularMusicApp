@@ -1,16 +1,24 @@
 <app-song-form 
     #formRef
     (onAddSong)="addSong($event)"
-    (searchSongEvent)="searchSong($event.artist, $event.name)"
-    [songId]="songId">
+    (searchSongEvent)="searchSong($event.searchedItem)"
+    [songId]="songId"
+    [isEditMode] ="isEditMode"
+    (applyChanges)="onApply()"
+   >
 </app-song-form>
+
 <app-song-list-header></app-song-list-header>
-<app-song 
-    *ngFor="let song of songs;
-    let i = index" 
-    [song]="song" 
-    [position]="i+1" 
-    (onDeleteSong)="deleteSong(song)"
-    (onVoteSong)="voteSong(song)"
-    (editSong)="onEditSong($event)"> 
-</app-song>
+
+<div id="searchError" *ngIf="searchResult === false">No songs found.</div>
+<div id="songContainer">
+    <app-song 
+        *ngFor="let song of songs;
+        let i = index" 
+        [song]="song" 
+        [position]="i+1" 
+        (onDeleteSong)="deleteSong(song)"
+        (onVoteSong)="voteSong(song)"
+        (editSong)="onEditSong($event)"> 
+    </app-song>
+</div>

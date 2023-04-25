@@ -8,7 +8,7 @@ import { SongListComponent } from './components/song-list/song-list.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SongFormComponent } from './components/song-form/song-form.component';
 import { SongListHeaderComponent } from './components/song-list-header/song-list-header.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,8 @@ import { SongListHeaderComponent } from './components/song-list-header/song-list
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule, 
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

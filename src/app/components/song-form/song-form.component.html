@@ -1,16 +1,33 @@
-<form id="song-form" ng-Submit="onSubmit()">
-    <div class="form-group">
-      <label for="artist-name">Artist name: </label>
-      <input type="text" #artistInput name="artist" [(ngModel)]="artist" title="artist-name" class="form-control" id="artist-name"  placeholder="artist name...">
+<form id="song-form">
+  <div class="search">
+    <div class="searchInput">
+        <input type="search" [(ngModel)]="search" #searchInput (input)="onInput()" name="searchInput" title="searchInput" class="form-control" id="search" placeholder="Search...">
+        <button type="submit" (click)="findSong(search)" id="searchBtn">Go</button>
     </div>
-    <div class="form-group">
-      <label for="song-name">Song name: </label>
-      <input type="text" #songInput name="name" [(ngModel)]="name" title="song-name" class="form-control" id="song-name" placeholder="song name...">
+    <div class="inputError" *ngIf="inputErrors[0].searchError">
+      Please provide a valid search item.
     </div>
+  </div>
+  <div class="inputContainer">
+    <div class="song">
+      <div class="formInput">
+        <input type="text" #songInput name="name" (input)="onInput()" [(ngModel)]="name" title="song-name" class="formControl" id="songName" placeholder="Song name...">
+      </div>
+      <div class="inputError" *ngIf="inputErrors[0].songError">
+        Please provide a valid song name.
+      </div>
+    </div>
+    <div class="artist">
+      <div class="formInput">
+        <input type="text" #artistInput name="artistName" (input)="onInput()" [(ngModel)]="artist" title="artist-name"  class="formControl" id="artistName"  placeholder="Artist name...">
+      </div>
+      <div class="inputError" *ngIf="inputErrors[0].artistError">
+        Please provide a valid artist name.
+      </div>
+    </div>
+  </div>
     <div class="buttons">
-        <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
-        <button type="submit" (click)="submitSearchSong(artist, name)" class="btn btn-primary">Search</button>
-        <button type="submit" (click)="onEditSong()" class="btn btn-primary">Apply changes</button>
+        <button type="submit"  class="button" [hidden]="!isEditMode" (click)="onEditSong()">Apply</button>
+        <button type="submit" id="submit" class="button" (click)="onSubmit()">Submit</button>
     </div>  
   </form>
- 

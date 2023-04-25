@@ -5,3 +5,9 @@ export interface Song {
     votes:number;
     readonly entryTopDate:string;
 }
+
+export interface formError {
+    artistError:boolean;
+    songError:boolean;
+    searchError:boolean;
+}

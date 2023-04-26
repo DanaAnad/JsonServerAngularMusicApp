@@ -3,15 +3,19 @@
 		<span id="song-id">{{position}}</span>
 	</div>
 	<div class="song-container">
-		<span id="song-name"> {{song.name}}</span>
-		<span id="artist-name">{{song.artist}}</span>
-		<span id="songEntryDate">{{song.entryTopDate}}</span>
-		<span id="votes"> {{song.votes}}</span>
+		<div class="song-info">
+			<span id="song-name"> {{song.name}}</span>
+			<span id="artist-name">{{song.artist}}</span>
+		</div>
+		<div class="song-data">
+			<span id="songEntryDate">{{song.entryTopDate}}</span>
+			<span id="votes"> {{song.votes}}</span>
+		</div>
 	</div>
 	<div class="song-buttons">
-		<button type="button" class="button" (click)="voteSong(song)" id="vote">Vote</button>
         <button type="button" class="button"  (click)="onEditClick(song.id!)" id="edit">Edit</button>
         <button type="button" class="button" (click)="onDelete(song)" id="delete" >Delete</button>
+		<button type="button" class="button" (click)="voteSong(song)" id="vote">Vote</button>
 	</div>
 </div>
 

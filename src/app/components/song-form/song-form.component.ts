@@ -28,7 +28,6 @@ export class SongFormComponent {
 
   @Input() songId :number;
   @Input() isEditMode:boolean = false;
-  // @Input() applyButtonVisible: boolean;
   
   @Output() formInput = new EventEmitter();
   @Output() onAddSong:EventEmitter<Song> = new EventEmitter();
@@ -50,7 +49,6 @@ onInput(){
     const artist = this.artistName.nativeElement.value;
     const song = this.songName.nativeElement.value;
     const search = this.searchSong.nativeElement.value;
-    console.log("searcH::",search);
     if(artist || song) {
       this.formInput.emit();
     }

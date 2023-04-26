@@ -59,7 +59,7 @@ export class SongListComponent  {
   searchSong(searchValue:any): void {
     this.songService.getSongs().subscribe(songs => {
       this.songs = songs.filter(song =>
-        searchValue ? song.artist === searchValue || song.name === searchValue :true
+        searchValue ? song.artist.toLowerCase() === searchValue.toLowerCase() || song.name.toLowerCase() === searchValue.toLowerCase() :true
       );
       this.searchResult = this.songs.length > 0;
     });

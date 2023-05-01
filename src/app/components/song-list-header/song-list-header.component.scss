@@ -8,47 +8,47 @@
     margin-bottom:1rem;
     margin-left: auto; margin-right: auto;
     justify-content: space-between;
- }
- #position {
-    display: flex;
-    justify-content: center;
-    width: 10vw;
- }
- .titles {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:60vw;
-    margin-left: 40px;
- }
- #name {
-   display: flex;
-   justify-content: center;
-   width: 15vw;
-   margin-left: 15px;
- }
- #artist {
-   display: flex;
-   justify-content:right;
-   width: 15vw;
-   margin-left:20px;
- }
- #date {
-   display: flex;
-   justify-content: right;
-   width: 15vw;
-   margin-left:65px;
- }
- #votes {
-   display: flex;
-   justify-content: right;
-   width: 15vw;
-   margin-right:17px;
- }
- .buttons {
-   display: flex;
-   justify-content: center;
-   width: 20vw;
+    #position {
+        display: inherit;
+        justify-content: center;
+        width: 10vw;
+    }
+    .titles {
+      display:inherit;
+      flex-direction: row;
+      justify-content: space-between;
+      width:60vw;
+      margin-left: 40px;
+      #name {
+        display: inherit;
+        justify-content: center;
+        width: 15vw;
+        margin-left: 15px;
+      }
+      #artist {
+        display: inherit;
+        justify-content:right;
+        width: 15vw;
+        margin-left:20px;
+      }
+      #date {
+        display: inherit;
+        justify-content: right;
+        width: 15vw;
+        margin-left:65px;
+      }
+      #votes {
+        display: inherit;
+        justify-content: right;
+        width: 15vw;
+        margin-right:17px;
+      }
+   }
+    .buttons {
+      display: inherit;
+      justify-content: center;
+      width: 20vw;
+    }
  }
 }
 @media (min-width:768px) and (max-width:1022px){
@@ -58,51 +58,50 @@
     width:96vw;
     height:35px;
     color:white;
-    // margin-bottom:0.3rem;
     margin-left: auto; margin-right: auto;
     justify-content: space-between;
- }
- #position {
-    display: flex;
-    justify-content: center;
-    width: 10vw;
- }
- .titles {
-    display:flex;
+    #position {
+      display: inherit;
+      justify-content: center;
+      width: 10vw;
+   }
+   .titles {
+    display:inherit;
     flex-direction: row;
     justify-content: space-between;
     width:60vw;
     margin-left: 40px;
+    #name {
+      display: inherit;
+      justify-content: center;
+      width: 15vw;
+      margin-left: 15px;
+    }
+    #artist {
+      display: inherit;
+      justify-content:right;
+      width: 15vw;
+      margin-left:20px;
+    }
+    #date {
+      display: inherit;
+      justify-content: right;
+      width: 15vw;
+      margin-left:65px;
+    }
+    #votes {
+      display: inherit;
+      justify-content: right;
+      width: 15vw;
+      margin-right:17px;
+    }
  }
- #name {
-   display: flex;
-   justify-content: center;
-   width: 15vw;
-   margin-left: 15px;
+  .buttons {
+    display: inherit;
+    justify-content: center;
+    width: 20vw;
+  } 
  }
- #artist {
-   display: flex;
-   justify-content:right;
-   width: 15vw;
-   margin-left:20px;
- }
- #date {
-   display: flex;
-   justify-content: right;
-   width: 15vw;
-   margin-left:65px;
- }
- #votes {
-   display: flex;
-   justify-content: right;
-   width: 15vw;
-   margin-right:17px;
- }
- .buttons {
-   display: flex;
-   justify-content: center;
-   width: 20vw;
- } 
 }
 @media (max-width:767px){
    .header {

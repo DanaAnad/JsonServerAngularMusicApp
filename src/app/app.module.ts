@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SongComponent } from './components/song/song.component';
 import { SongListComponent } from './components/song-list/song-list.component';
-import { ButtonComponent } from './components/button/button.component';
 import { SongFormComponent } from './components/song-form/song-form.component';
 import { SongListHeaderComponent } from './components/song-list-header/song-list-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -14,7 +13,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     SongComponent,
     SongListComponent,
-    ButtonComponent,
     SongFormComponent,
     SongListHeaderComponent
   ],

@@ -1,21 +1,27 @@
+$color:#c70c6f; 
 @media (min-width:1023px){
     .song-component-container {
-        display:flex;
-        width:96vw;
-        flex-wrap: wrap;
-        flex-direction:row;
-        justify-content: space-between;
+            display:flex;
+            width:96vw;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content: space-between;
+        .song-position {
+            display:inherit;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            width:10vw;
+            height:50px;
+            font-size: large;
+            #song-id {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: center;
+                width:15vw;
+            }
+        }
     }
-    .song-position {
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
-        align-items: center;
-        width:10vw;
-        height:50px;
-        font-size: large;
-    }
- 
     .song-container {
         display:flex;
         flex-direction:row;
@@ -23,46 +29,40 @@
         align-items:center;
         height:50px;
         width:60vw;
-    }
-    .song-info {
-        display: flex;
-        flex-direction: row;
-        width:30vw;
-        justify-content: space-between;
-    }
-    .song-data {
-        display: flex;
-        flex-direction: row;
-        width:30vw; 
-        justify-content: space-between;
-    }
-    #song-id {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        width:15vw;
-    }
-    #song-name {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        width:15vw;
-        margin-left:40px;
-    }
-    #artist-name {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        width:15vw;
-        margin-left:20px;
-        justify-content: right;
-    }
-    #songEntryDate {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        width:15vw;
-        margin-left:140px;
+        .song-info {
+            display: inherit;
+            flex-direction: row;
+            width:30vw;
+            justify-content: space-between;
+            #song-name {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: center;
+                width:15vw;
+                margin-left:40px;
+            }
+            #artist-name {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: center;
+                width:15vw;
+                margin-left:20px;
+                justify-content: right;
+            }
+        }
+        .song-data {
+            display: flex;
+            flex-direction: row;
+            width:30vw; 
+            justify-content: space-between;
+            #songEntryDate {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: center;
+                width:15vw;
+                margin-left:140px;
+            }
+        }
     }
     .song-buttons {
         display:flex;
@@ -73,18 +73,18 @@
         font-size: small;
         font-family: sans-serif;
         width: 20vw;
-    }
-    .button {
-        height:30px;
-        display:block;
-        width:75px;
-        border-radius: 20px;
-        background-color: #c70c6f;
-        color:white;
-        border:none;
-        text-align: center;
-        align-content: center;
-        line-height:30px;
+        .button {
+            height:30px;
+            display:block;
+            width:75px;
+            border-radius: 20px;
+            background-color: $color;
+            color:white;
+            border:none;
+            text-align: center;
+            align-content: center;
+            line-height:30px;
+        }
     }
     .selected {
         background-color:rgb(210, 204, 204);
@@ -98,95 +98,94 @@
         flex-wrap: wrap;
         flex-direction:row;
         justify-content: space-evenly;
-        border-bottom: 1px solid #c70c6f;
+        border-bottom: 1px solid $color;
         border-radius:20px;
+        .song-position {
+            display:inherit;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            width:4vw;
+            font-size: large;
+            #song-id {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: center;
+                width:15vw;
+            }
+        }
+        .song-buttons {
+            display:inherit;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            font-size: small;
+            font-family: sans-serif;
+            width: 20vw;
+            margin-right:-25px;
+            .button {
+                height:30px;
+                display:block;
+                width:75px;
+                border-radius: 20px;
+                background-color: $color;
+                color:white;
+                border:none;
+                text-align: center;
+                align-content: center;
+                line-height:30px;
+                margin:2px;
+            }
+        }
     }
-    .song-position {
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
-        align-items: center;
-        width:4vw;
-        font-size: large;
-    }
- 
     .song-container {
         display:flex;
         flex-direction:row;
         justify-content:space-around;
         align-items:center;
         width:60vw;
-    }
-    .song-info {
-        display: flex;
-        flex-direction: row;
-        width:30vw;
-        justify-content: space-between;
-    }
-    .song-data {
-        display: flex;
-        flex-direction: row;
-        width:30vw; 
-        justify-content: space-between;
-        margin-left:-50px;
-    }
-    #song-id {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        width:15vw;
-    }
-    #song-name {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: flex-start;
-        width:15vw;
-        margin-left:35px;
-    }
-    #artist-name {
-        display:flex;
-        flex-wrap:wrap;
-        width:15vw;
-        margin-right:-22px;
-        justify-content: right;
-    }
-    #songEntryDate {
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: center;
-        width:15vw;
-        margin-left:140px;
-    }
-    #votes {
-        display:flex;
-        flex-wrap:wrap;
-        width:15vw;
-        margin-right:-22px;
-        justify-content: right; 
-    }
-    .song-buttons {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: center;
-        font-size: small;
-        font-family: sans-serif;
-        width: 20vw;
-        margin-right:-25px;
-    }
-    .button {
-        height:30px;
-        display:block;
-        width:75px;
-        border-radius: 20px;
-        background-color: #c70c6f;
-        color:white;
-        border:none;
-        text-align: center;
-        align-content: center;
-        line-height:30px;
-        margin:2px;
+        .song-info {
+            display: inherit;
+            flex-direction: row;
+            width:30vw;
+            justify-content: space-between;
+            #song-name {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: flex-start;
+                width:15vw;
+                margin-left:58px;
+            }
+            #artist-name {
+                display:inherit;
+                flex-wrap:wrap;
+                width:15vw;
+                margin-right:5px;
+                justify-content: right;
+            }
+        }
+        .song-data {
+            display: inherit;
+            flex-direction: row;
+            width:30vw; 
+            justify-content: space-between;
+            margin-left:-50px;
+            #songEntryDate {
+                display:inherit;
+                flex-wrap:wrap;
+                justify-content: center;
+                width:15vw;
+                margin-left:125px;
+            }
+            #votes {
+                display:inherit;
+                flex-wrap:wrap;
+                width:15vw;
+                margin-right:-12px;
+                justify-content: right; 
+            }
+        }
     }
     .selected {
         background-color:rgb(210, 204, 204);
@@ -201,45 +200,45 @@
         width:93vw;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        border-bottom: 1px solid #c70c6f;
+        border-bottom: 1px solid $color;
         border-radius: 20px;
-    }
-    .song-position {
-        display: flex;
-        flex-direction: row;
-        width:7vw;
-        justify-content: center;
-        margin-left:-10px;
-    }
-    .song-container {
-        display: flex;
-        flex-direction: column;
-        width:43vw;
-    }
-    .song-info {
-        display: flex;
-        flex-direction: column;
-    }
-    .song-data {
-        display: flex;
-        flex-direction: column;
-    }
-    .song-buttons {
-        display: flex;
-        flex-direction: column;
-        width:43vw;
-        justify-content: right;
-    }
-    .button {
-        height:25px;
-        display:block;
-        width:75px;
-        border-radius: 20px;
-        background-color: #c70c6f;
-        color:white;
-        border:none;
-        margin:auto;
-        margin-right:1px;
+        .song-position {
+            display: inherit;
+            flex-direction: row;
+            width:7vw;
+            justify-content: center;
+            margin-left:-10px;
+        }
+        .song-container {
+            display: inherit;
+            flex-direction: column;
+            width:43vw;
+            .song-info {
+                display: inherit;
+                flex-direction: column;
+            }
+            .song-data {
+                display: inherit;
+                flex-direction: column;
+            }
+        }
+        .song-buttons {
+            display: inherit;
+            flex-direction: column;
+            width:43vw;
+            justify-content: right;
+            .button {
+                height:25px;
+                display:block;
+                width:75px;
+                border-radius: 20px;
+                background-color: $color;
+                color:white;
+                border:none;
+                margin:auto;
+                margin-right:1px;
+            }
+        }
     }
     .selected {
         background-color:rgb(210, 204, 204);

@@ -1,10 +1,11 @@
+$color:#c70c6f;
 @media (min-width:1023px){
     #searchError {
         display:flex;
         flex-direction: row;
         justify-content: center;
         align-content: center;
-        color:#c70c6f;
+        color:$color;
         padding:30px;
         font-size: larger;
     }
@@ -15,7 +16,7 @@
         flex-direction: row;
         justify-content: center;
         align-content: center;
-        color:#c70c6f;
+        color:$color;
         padding:30px;
         font-size: larger;
     }
@@ -26,7 +27,7 @@
         flex-direction: row;
         justify-content: center;
         align-content: center;
-        color:#c70c6f;
+        color:$color;
         padding:30px;
         font-size: larger;
     }

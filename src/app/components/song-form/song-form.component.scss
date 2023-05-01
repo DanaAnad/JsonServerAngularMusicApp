@@ -1,3 +1,4 @@
+$color:#c70c6f;
 @media (min-width:1023px){
     #song-form {
         margin-left:auto; margin-right:auto;
@@ -6,91 +7,91 @@
         align-items: center;
         margin-top:1.5rem;
         margin-bottom:1.7rem;
-    }
-    .search {
-        display: flex;
-        flex-direction: column;
-    }
-    .searchInput {
-        display:flex;
-        margin: 10px;
-        margin-left:30px;
-        width:20vw;
+        .search {
+            display: inherit;
+            flex-direction: column;
+            .searchInput {
+                display:inherit;
+                margin: 10px;
+                margin-left:30px;
+                width:20vw;
+                #search {
+                    border-radius:20px;
+                    height:33px;
+                    width: 220px;
+                    margin-left:5px;
+                    border:none;
+                }
+                #searchBtn {
+                    display:block;
+                    flex-wrap: wrap;
+                    width: 33px;
+                    height: 33px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                    align-content: center;
+                    text-align:center;
+                    line-height: 31px;
+                    background-color:$color;
+                    color:white;
+                    border:none;
+                    font-size:smaller;
+                }
+            }
+        }
     }
     ::placeholder {
-        color:#c70c6f;
-    }
-    #search {
-        border-radius:20px;
-        height:33px;
-        width: 220px;
-        margin-left:5px;
-        border:none;
-    }
-    #searchBtn {
-        display:block;
-        flex-wrap: wrap;
-        width: 33px;
-        height: 33px;
-        border-radius: 50%;
-        margin-left: 15px;
-        align-content: center;
-        text-align:center;
-        line-height: 31px;
-        background-color:#c70c6f;
-        color:white;
-        border:none;
-        font-size:smaller;
+        color:$color;
     }
     .formContainer{
         display: flex;
         flex-direction: row;
-    }
-    .inputContainer {
-        display:flex;
-        flex-direction: row;
-        width: 50vw;
-        justify-content: flex-end;
-        margin-left:50px
-    }
-    .song {
-        display: flex;
-        flex-direction: column;
-        margin:10px;
-    }
-    .artist {
-        display: flex;
-        flex-direction: column;
-        margin:10px;
-    }
-    .formInput {
-        display: flex;
-        margin: 10px;
-    }
-    .formControl {
-        width: 230px;
-        height: 33px;
-        border-radius:20px;
-        border:none;
-    }
-    .buttons {
-        display:flex;
-        justify-content: flex-end;
-        width:20vw;
-        margin-left:40px;
-        margin-top:15px;
-    }
-    .button {
-        margin:5px;
-        width:120px;
-        height: 31px;
-        border-radius:20px;
-        border:none;
-        background-color: #c70c6f;
-        color:white;
-    }
-    #submit {
-        margin-right:15px;
+        .inputContainer {
+            display:inherit;
+            flex-direction: row;
+            width: 50vw;
+            justify-content: flex-end;
+            margin-left:50px;
+            .song {
+                display: inherit;
+                flex-direction: column;
+                margin:10px;
+            }
+            .artist {
+                display: inherit;
+                flex-direction: column;
+                margin:10px;
+            }
+            .formInput {
+                display: inherit;
+                margin: 10px;
+                .formControl {
+                    width: 230px;
+                    height: 33px;
+                    border-radius:20px;
+                    border:none;
+                }
+            }
+        }
+        .buttons {
+            display:inherit;
+            justify-content: flex-end;
+            width:20vw;
+            margin-left:40px;
+            margin-top:15px;
+            .button {
+                margin:5px;
+                width:120px;
+                height: 31px;
+                border-radius:20px;
+                border:none;
+                background-color: $color;
+                color:white;
+            }
+            #submit {
+                margin-right:15px;
+            }
+        }
     }
     .inputError {
         color:white;
@@ -109,85 +110,83 @@
             align-items: center;
             margin-top:1.5rem;
             margin-bottom:1.7rem;
-        }
-        .search {
-            display: flex;
-            flex-direction: column;
-        }
-        .searchInput {
-            display:flex;
-            margin: 10px;
+            .search {
+                display: inherit;
+                flex-direction: column;
+                .searchInput {
+                    display:inherit;
+                    margin: 10px;
+                    #search {
+                        border-radius:20px;
+                        height:33px;
+                        width: 220px;
+                        border:none;
+                    }
+                    #searchBtn {
+                        display:block;
+                        flex-wrap: wrap;
+                        width: 33px;
+                        height: 33px;
+                        border-radius: 50%;
+                        margin-left: 15px;
+                        align-content: center;
+                        text-align:center;
+                        line-height: 31px;
+                        background-color:$color;
+                        color:white;
+                        border:none;
+                        font-size:smaller;
+                    }
+                }
+            }
         }
         ::placeholder {
-            margin:5px;
-            color:#c70c6f;
+            color:$color;
         }
-        #search {
-            border-radius:20px;
-            height:33px;
-            width: 220px;
-            border:none;
-        }
-        #searchBtn {
-            display:block;
-            flex-wrap: wrap;
-            width: 33px;
-            height: 33px;
-            border-radius: 50%;
-            margin-left: 15px;
-            align-content: center;
-            text-align:center;
-            line-height: 31px;
-            background-color:#c70c6f;
-            color:white;
-            border:none;
-            font-size:smaller;
-        }
-        .formContainer{
+        .formContainer {
             display: flex;
             flex-direction: row;
-        }
-        .inputContainer {
-            display:flex;
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-        .song {
-            display: flex;
-            flex-direction: column;
-        }
-        .artist {
-            display: flex;
-            flex-direction: column;
-        }
-        .formInput {
-            display: flex;
-            margin: 10px;
-        }
-        .formControl {
-            width: 230px;
-            height: 33px;
-            border-radius:20px;
-            border:none;
-            text-align:center;
-        }
-        .buttons {
-            display:flex;
-            justify-content: flex-end;
-            margin-left:30px;
-            margin-top:7px;
-        }
-        .button {
-            margin:5px;
-            width:120px;
-            height: 31px;
-            border-radius:20px;
-            border:none;
-            background-color: #c70c6f;
-            color:white;
-        }
-        #submit {
-            margin-right:15px;
+            .inputContainer {
+                display:inherit;
+                flex-direction: row;
+                justify-content: flex-start;
+                .song {
+                    display: inherit;
+                    flex-direction: column;
+                }
+                .artist {
+                    display: inherit;
+                    flex-direction: column;
+                }
+                .formInput {
+                    display: inherit;
+                    margin: 10px;
+                    .formControl {
+                        width: 230px;
+                        height: 33px;
+                        border-radius:20px;
+                        border:none;
+                    }
+                }
+            }
+            .buttons {
+                display:inherit;
+                justify-content: flex-end;
+                margin-left:30px;
+                margin-top:7px;
+                .button {
+                    margin:5px;
+                    width:120px;
+                    height: 31px;
+                    border-radius:20px;
+                    border:none;
+                    background-color: $color;
+                    color:white;
+                }
+                #submit {
+                    margin-right:15px;
+                }
+            }
         }
         .inputError {
             color:white;
@@ -202,41 +201,40 @@
             display:flex;
             flex-direction: column;
             margin-top:1rem; margin-bottom: 0.5rem;
-        }
-        .search {
-            display:flex;
-            flex-direction: column;
-        }
-        .searchInput {
-            display:flex;
-            flex-direction: row; 
-        }
-        #search {
-            height:33px;
-            width: 170px;
-            border-radius: 20px;
-            margin:5px;
-            margin-bottom: 15px;
-            border: none;
+            .search {
+                display:inherit;
+                flex-direction: column;
+                .searchInput {
+                    display:inherit;
+                    flex-direction: row; 
+                    #search {
+                        height:33px;
+                        width: 170px;
+                        border-radius: 20px;
+                        margin-left:5px;
+                        // margin-bottom: 5px;
+                        border: none;
+                    }
+                    #searchBtn {
+                        display:block;
+                        width: 34px;
+                        height: 34px;
+                        border-radius: 50%;
+                        margin:5px;
+                        background-color:$color;
+                        color:white;
+                        border:none;
+                        font-size:smaller;
+                    }
+                }
+            }
         }
         ::placeholder {
-            color:#c70c6f;
-        }
-        #searchBtn {
-            display: block;
-            flex-wrap: wrap;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            margin:5px;
-            background-color:#c70c6f;
-            color:white;
-            border:none;
-            font-size:smaller;
+            color:$color;
         }
         .inputError {
             color:white;
-            display: flex;
+            display: inherit;
             flex-direction: column;
             margin-left:5px;
             font-size:15px;
@@ -245,42 +243,44 @@
             display:flex;
             flex-direction: row;
             justify-content: space-around;
+            .inputContainer {
+                display:inherit;
+                flex-direction: column;
+                margin-right:auto;
+                margin-left: 5px;
+                .song {
+                    display: inherit    ;
+                    flex-direction: column;
+                    margin-bottom:5px;
+                }
+                .artist {
+                    display: inherit;
+                    flex-direction: column;
+                    margin-bottom:5px;
+                }
+                .formControl {
+                    width: 170px;
+                    height: 33px;
+                    border-radius:20px;
+                    border:none;
+                }
+            }
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                height:77px;
+                justify-content: space-between;
+                .button {
+                    width:120px;
+                    height: 33px;
+                    border-radius:20px;
+                    border:none;
+                    background-color: $color;
+                    color:white;
+                    margin:5px;
+                }
+            }    
         }
-        .inputContainer {
-            display:flex;
-            flex-direction: column;
-            margin-right:auto;
-            margin-left: 5px;
-        }
-        .song {
-            display: flex;
-            flex-direction: column;
-            margin-bottom:5px;
-        }
-        .artist {
-            display: flex;
-            flex-direction: column;
-            margin-bottom:5px;
-        }
-        .formControl {
-            width: 170px;
-            height: 33px;
-            border-radius:20px;
-            border:none;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            height:77px;
-            justify-content: space-between;
-        }
-        .button {
-            width:120px;
-            height: 33px;
-            border-radius:20px;
-            border:none;
-            background-color: #c70c6f;
-            color:white;
-            margin:5px;
-        }
+    
+       
     }

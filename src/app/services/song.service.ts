@@ -9,8 +9,8 @@ import { Song } from '../Interfaces/Song';
 })
 export class SongService {
 	updateSongEvent = new EventEmitter<Song>();
-	
-	private apiUrl = "https://jsonserversongs.herokuapp.com/songs";
+
+	private apiUrl = "http://localhost:3000/songs";
 
 	constructor( private http:HttpClient) { }
 

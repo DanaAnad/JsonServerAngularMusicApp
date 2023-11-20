@@ -13,6 +13,8 @@ Used Angular features to replicate a song top behavior as follows:
 - download or clone the repository.
 - install Node JS, NPM and Angular CLI on your computer using yarn install or npm install command in shell.
 
+Open your terminal of choice and :  
+Run `json-server --watch db.json` to start the server that holds the database.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding

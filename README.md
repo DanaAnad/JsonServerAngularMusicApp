@@ -13,8 +13,8 @@ Used Angular features to replicate a song top behavior as follows:
 - download or clone the repository.
 - install Node JS, NPM and Angular CLI on your computer using yarn install or npm install command in shell.
 
-Open your terminal of choice and :  
-Run `json-server --watch db.json` to start the server that holds the database.
+Open your terminal of choice and navigate to the app folder. 
+Run `json-server --watch db.json` to start the database server that holds the songs.
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
@@ -23,7 +23,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
 
 ## Running unit tests
 
